@@ -1,0 +1,87 @@
+@import '../variables.scss';
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  background-color: var(--nav);
+  padding: 10px;
+
+  .container {
+    display: flex;
+    // align-items: center;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+
+    .brand {
+      width: 2em;
+      height: 2em;
+      margin-right: 5px;
+    }
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      display: block;
+      margin-left: 45px;
+
+      .home {
+        font-weight: bold;
+      }
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: var(--text-color);
+
+      &:hover {
+        color: var(--primary-color);
+
+      }
+    }
+  }
+}
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .brand {
+//     animation: brand-spin infinite 20s linear;
+//   }
+// }
+
+// @keyframes brand-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

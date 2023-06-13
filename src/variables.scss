@@ -1,0 +1,28 @@
+:root {
+    --primary-color: #61DAFB;
+    --select-color: #7ee0fc;
+
+    --background-color-light: white;
+    --nav-light: #f2f2f2;
+    --text-color-light: black;
+    --select-text-color-light: white;
+
+    --background-color-dark: #2F2F2F;
+    --nav-dark: #1F1F1F;
+    --text-color-dark: #D1D5DB;
+    --select-text-color-dark: black;
+}
+
+.lightMode {
+    --background-color: var(--background-color-light);
+    --nav: var(--nav-light);
+    --text-color: var(--text-color-light);
+    --select-text-color: var(--select-text-color-light);
+}
+
+.darkMode {
+    --background-color: var(--background-color-dark);
+    --nav: var(--nav-dark);
+    --text-color: var(--text-color-dark);
+    --select-text-color: var(--select-text-color-dark);
+}

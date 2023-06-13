@@ -1,0 +1,34 @@
+:root {
+    --primary-color: #61DAFB;
+    --select-color: #7ee0fc;
+    
+    --background-color-light: white;
+    --background-color-dark: #2F2F2F;
+
+    --nav-background-color-light: #f2f2f2;
+    --nav-background-color-dark: #1F1F1F;
+
+    --text-color-light: black;
+    --text-color-dark: #D1D5DB;
+}
+
+.lightMode {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+.lightMode .navbar {
+    background-color: var(--nav-background-color-light);
+}
+
+.darkMode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.darkMode .navbar {
+    background-color: var(--nav-background-color-dark);
+}
+
+//concept -> root value changes with the class used (light/dark)
+//class for div/body. change root color accroding to div/body. switch class of div

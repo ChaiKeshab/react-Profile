@@ -1,13 +1,18 @@
-import './App.scss';
 import Navbar from './components/Navbar';
+import Inputs from './components/Inputs'
+import './App.scss';
+import './components/Navbar.scss';
+import './components/Inputs.scss';
+
 
 function App() {
+
   return (
-    <>
-    {/* component names should start with capital everywhere. Passing prop to component   */}
-      <Navbar title = 'Project' spanTitle = 'Rewind'/>
-    </>
+    <div>
+      <Navbar title='Project' spanTitle='Rewind' />
+      <Inputs Username="Your mama's name" />
+    </div>
   );
 }
 
-export default App;  
+export default App;

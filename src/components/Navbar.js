@@ -1,7 +1,6 @@
-import React from 'react'
-import logo from '../logo.svg'
-import '../App.scss';
-import PropTypes from 'prop-types' 
+import React from 'react';
+import logo from '../logo.svg';
+import PropTypes from 'prop-types';
 // impt
 
 // rfc (react-function-component)
