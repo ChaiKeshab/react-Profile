@@ -1,17 +1,36 @@
-import React from 'react';
-import logo from '../logo.svg';
+import React, { useEffect, useState } from 'react';
+
+// import logo from '../logo.svg';
 import PropTypes from 'prop-types';
 // impt
 
 // rfc (react-function-component)
 export default function Navbar(props) {
+  const [mode, setMode] = useState('Dark Mode')
+  const [theme, setTheme] = useState('darkMode')
+
+  function toggleMode() {
+    if (theme === 'darkMode') {
+      setTheme('lightMode')
+      setMode('Dark Mode')
+    }
+    if (theme === 'lightMode') {
+      setTheme('darkMode')
+      setMode('Light Mode')
+    }
+  }
+
+  useEffect(() => {
+    document.body.classList = theme
+  }, [theme]);
+
   return (
     <div className="navbar">
       <div className="container">
         <div className="logo-container">
 
           <a href="/" className="logo">
-            <img className='brand' src={logo} alt="logo" />
+            {/* <img className='brand' src={logo} alt="logo" /> */}
             {props.title}<span>{props.spanTitle}</span>
           </a>
         </div>
@@ -23,6 +42,8 @@ export default function Navbar(props) {
             <li><a href="/">Contact</a></li>
             <li><a href="/">Blog</a></li>
           </ul>
+
+          <button className='btn-mode' onClick={toggleMode}>{mode}</button>
 
           <ul className='secondary-nav'>
             <li><a href="/">Notification</a></li>

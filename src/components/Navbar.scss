@@ -41,6 +41,12 @@ body {
     flex-grow: 1;
     justify-content: space-between;
 
+    .btn-mode{
+      width: fit-content;
+      background-color: var(--nav);
+      color: var(--text-color);
+    }
+
     ul {
       display: flex;
       align-items: center;
