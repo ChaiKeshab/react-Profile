@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 // rfc (react-function-component)
 export default function Navbar(props) {
-  const [mode, setMode] = useState('Dark Mode')
+  const [mode, setMode] = useState('Light Mode')
   const [theme, setTheme] = useState('darkMode')
 
   function toggleMode() {
