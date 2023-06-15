@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
+import './Navbar.scss'
 // import logo from '../logo.svg';
 // impt
 

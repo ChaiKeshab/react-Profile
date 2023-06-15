@@ -5,8 +5,6 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Blog from './components/Blog';
 import './App.scss';
-import './components/Navbar.scss';
-import './components/Inputs.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {

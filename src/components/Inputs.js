@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './Inputs.scss'
 
 export default function Inputs(props) {
     const [valHold, setValHold] = useState('')
