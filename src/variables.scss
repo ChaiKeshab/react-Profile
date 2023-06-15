@@ -3,14 +3,16 @@
     --select-color: #613b97;
 
     --background-color-light: white;
-    --nav-light: #f2f2f2;
+    --nav-light: #DED8E5;
     --text-color-light: black;
     --select-text-color-light: white;
+    --background-image-light: url(./Images/snow.jpg);
 
     --background-color-dark: #0E0E0E;
     --nav-dark: #1C1C1C;
     --text-color-dark: #D1D5DB;
     --select-text-color-dark: #F8F8F8;
+    --background-image-dark: url(./Images/Kiln.jpg);
 }
 
 .lightMode {
@@ -18,6 +20,8 @@
     --nav: var(--nav-light);
     --text-color: var(--text-color-light);
     --select-text-color: var(--select-text-color-light);
+    // background: radial-gradient(#f2f2f2, #766094);
+    --background-image: var(--background-image-light)
 }
 
 .darkMode {
@@ -25,4 +29,6 @@
     --nav: var(--nav-dark);
     --text-color: var(--text-color-dark);
     --select-text-color: var(--select-text-color-dark);
+    // background: radial-gradient(#818181, black);
+    --background-image: var(--background-image-dark)
 }

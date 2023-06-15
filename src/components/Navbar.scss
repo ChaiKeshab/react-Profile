@@ -1,23 +1,21 @@
 @import '../variables.scss';
 
-body {
-  margin: 0;
-}
-
 .navbar {
   background-color: var(--nav);
   padding: 10px;
-
-  .container {
+  top: 0;
+  left: 0;
+  
+  .container-navbar {
     display: flex;
     // align-items: center;
   }
-
+  
   .logo-container {
     display: flex;
     align-items: center;
   }
-
+  
   .logo {
     text-decoration: none;
     color: var(--text-color);

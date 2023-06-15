@@ -1,0 +1,39 @@
+@import '../variables.scss';
+
+.container-home {
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+
+    z-index: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    display: block;
+    font-size: 14px;
+    height: 730px;
+    left: 0px;
+    line-height: 20px;
+    padding-bottom: 67px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 269.797px;
+    // position: absolute;
+    right: 0px;
+    text-align: center;
+    text-size-adjust: 100%;
+}
+
+.section-home {
+    box-sizing: border-box;
+    color: var(--text-color);
+    display: block;
+    padding-top: 100px;
+    text-align: center;
+    height: 730px;
+    padding-top: 25%;
+    padding-bottom: 25%;
+    font-size: 25px;
+
+}
