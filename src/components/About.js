@@ -6,7 +6,7 @@ export default function About() {
     return (
         <div className='container-empty'>
             <h2>About...</h2>
-            <img src={cry} alt="Empty..." />
+            <img className='empty' src={cry} alt="Empty..." />
         </div>
     )
 }

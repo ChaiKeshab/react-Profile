@@ -1,33 +1,38 @@
 @import '../variables.scss';
 
+.mobile-menu,
+.mobile-menu-exit {
+  display: none;
+  height: 20px;
+}
+
 .navbar {
   background-color: var(--nav);
   padding: 10px;
   top: 0;
   left: 0;
-  
+  right: 0;
+  position: fixed;
+  z-index: 99;
+
   .container-navbar {
     display: flex;
-    // align-items: center;
+    place-content: space-between;
+    align-items: center;
   }
-  
+
   .logo-container {
     display: flex;
     align-items: center;
+    margin-left: 20px;
   }
-  
+
   .logo {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 2em;
-    display: flex;
-    align-items: center;
-
-    .brand {
-      width: 2em;
-      height: 2em;
-      margin-right: 5px;
-    }
+    font-size: 32px;
+    // display: flex;
+    // align-items: center;
 
     span {
       color: var(--primary-color);
@@ -37,13 +42,13 @@
   nav {
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
+    justify-content: flex-end;
 
-    .btn-mode{
+    .btn-mode {
       width: fit-content;
       background-color: var(--nav);
       color: var(--text-color);
-      font-weight: bold;
+      font-size: 20px;
     }
 
     ul {
@@ -55,38 +60,92 @@
     }
 
     ul li {
-      display: block;
       margin-left: 45px;
-
-      .home {
-        font-weight: bold;
-      }
     }
 
     ul li a {
       text-decoration: none;
       color: var(--text-color);
 
-      &:hover {
-        color: var(--primary-color);
+    }
 
+    ul li {
+      .sun{
+        width: 20px;
+        margin-left: 25px;
+        display: var(--display);
+      }
+      .moon{
+        width: 20px;
+        margin-left: 25px;
+        display: var(--display);
+        position: relative;
+        right: 45px;
+        
+      }
+    }
+
+    // ul li .btn-mode {
+    //   color: var(--text-color);
+    //   padding: 0;
+
+    //   &:hover {
+    //     color: var(--primary-color);
+
+    //   }
+    // }
+  }
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+    .container-navbar {
+      .logo-container {
+        margin: 0;
+
+        .logo {
+          font-size: 25px;
+        }
+      }
+
+      .mobile-menu {
+        display: var(--display);
+      }
+
+      nav {
+        display: var(--display);
+
+        .mobile-menu-exit {
+          display: var(--display);
+          position: fixed;
+          top: 18px;
+          right: 17px;
+          z-index: 999;
+        }
+
+        .primary-nav {
+          display: block;
+          position: fixed;
+          background-color: var(--nav);
+          width: 75%;
+          height: 100vh;
+          top: 0;
+          left: 25vw;
+          font-size: 20px;
+          padding-top: 200px;
+          align-items: center;
+
+          li {
+            padding: 20px 0 20px 20px;
+
+            .moon{
+              bottom: 40px;
+              right: 0px;
+            }
+          }
+        }
       }
     }
   }
 }
-
-// @media (prefers-reduced-motion: no-preference) {
-//   .brand {
-//     animation: brand-spin infinite 20s linear;
-//   }
-// }
-
-// @keyframes brand-spin {
-//   from {
-//     transform: rotate(0deg);
-//   }
-
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }

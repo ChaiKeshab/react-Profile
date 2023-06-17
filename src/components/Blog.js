@@ -6,7 +6,7 @@ export default function Blog() {
     return (
         <div className='container-empty'>
             <h2>Blog...</h2>
-            <img src={catCry} alt="Empty..." />
+            <img className='empty' src={catCry} alt="Empty..." />
         </div>
     )
 }

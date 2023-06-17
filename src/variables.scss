@@ -1,6 +1,9 @@
 :root {
-    --primary-color: #5d3694;
-    --select-color: #613b97;
+    --primary-color: #0f5486;
+    --select-color: #1f9df7;
+
+    --display-show: block;
+    --display-hide: none;
 
     --background-color-light: white;
     --nav-light: #DED8E5;
@@ -9,7 +12,7 @@
     --background-image-light: url(./Images/snow.jpg);
 
     --background-color-dark: #0E0E0E;
-    --nav-dark: #1C1C1C;
+    --nav-dark: #090B17;
     --text-color-dark: #D1D5DB;
     --select-text-color-dark: #F8F8F8;
     --background-image-dark: url(./Images/Kiln.jpg);
@@ -31,4 +34,12 @@
     --select-text-color: var(--select-text-color-dark);
     // background: radial-gradient(#818181, black);
     --background-image: var(--background-image-dark)
+}
+
+.show {
+    --display: var(--display-show)
+}
+
+.hide {
+    --display: var(--display-hide)
 }
