@@ -1,5 +1,5 @@
 .footer {
-    height: 220px;
+    height: 210px;
     background-color: var(--nav);
     text-align: center;
     box-sizing: border-box;
@@ -40,5 +40,18 @@
             }
         }
 
+    }
+}
+
+@media (max-width: 767px) {
+    .footer {
+        ul li a svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .copyright{
+            font-size: 0.9em;
+        }
     }
 }

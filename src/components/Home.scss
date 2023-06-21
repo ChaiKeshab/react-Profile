@@ -4,7 +4,7 @@
     background-image: var(--background-image);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: cover;
+    background-size: 100vw;
     background-attachment: fixed;
 
     z-index: 0;
@@ -28,12 +28,37 @@
 .section-home {
     box-sizing: border-box;
     color: var(--text-color);
-    display: block;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
     padding-top: 100px;
-    text-align: center;
     height: 730px;
     padding-top: 365px;
     padding-bottom: 365px;
     font-size: 25px;
 
+    p {
+        margin: 0;
+    }
+
+    a {
+        margin-top: 20px;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+}
+
+@media (max-width: 767px) {
+    .container-home {
+        background-image: var(--background-image-mobile);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 100vw;
+        background-attachment: fixed;
+    }
+
+    .section-home p,
+    a {
+        font-size: 0.8em;
+    }
 }

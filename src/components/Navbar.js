@@ -14,6 +14,7 @@ export default function Navbar(props) {
   //------------------------------------darkMode------------------------------------
   const [mode, setMode] = useState('false')
   const [theme, setTheme] = useState('darkMode')
+  const [blur, setBlur] = useState('')
 
   function toggleMode() {
     if (theme === 'darkMode') {
@@ -28,17 +29,31 @@ export default function Navbar(props) {
   }
 
   useEffect(() => {
-    document.body.classList = theme
-  }, [theme]);
+    document.body.classList.toggle('blur', !!blur);
+    document.body.classList.toggle('darkMode', theme === 'darkMode');
+    document.body.classList.toggle('lightMode', theme === 'lightMode');
+  }, [theme, blur]);
+  
   //------------------------------------menuToggle------------------------------------
   const [hamBar, setHamBar] = useState(false)
   function toggleHambar() {
-    if (hamBar === false) {
+    if (blur === '') {
       setHamBar(true)
+      setBlur('blur')
     }
-    if (hamBar === true) {
+
+    if (blur === 'blur') {
       setHamBar(false)
+      setBlur('')
     }
+    // if (hamBar === false) {
+    //   setHamBar(true)
+    //   setBlur('blur')
+    // }
+    // if (hamBar === true) {
+    //   setHamBar(false)
+    //   setBlur('')
+    // }
   }
 
   return (
@@ -52,10 +67,10 @@ export default function Navbar(props) {
         </div>
         <img id="mobile-cta" className={`mobile-menu ${hamBar ? 'hide' : 'show'}`} src={menu} alt="Open Navigation" onClick={toggleHambar} />
 
-        <nav className={`${hamBar ? 'show' : 'hide'}`}>
+        <nav>
           <img id="mobile-exit" className={`mobile-menu-exit ${hamBar ? 'show' : 'hide'}`} src={exit} alt="Close Navigation" onClick={toggleHambar} />
 
-          <ul className='primary-nav'>
+          <ul className={`primary-nav ${hamBar ? 'show' : 'hide'}`}>
             {/* <li><Link className='home' to="/">Home</Link></li> */}
             <li><Link to="/About" onClick={toggleHambar} className={`${hamBar ? 'hide' : 'show'}`}>About</Link></li>
             <li><Link to="/Projects" onClick={toggleHambar} className={`${hamBar ? 'hide' : 'show'}`}>Projects</Link></li>

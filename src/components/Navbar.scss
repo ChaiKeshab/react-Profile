@@ -3,7 +3,9 @@
 .mobile-menu,
 .mobile-menu-exit {
   display: none;
-  height: 20px;
+    height: 20px;
+    width: 35px;
+    padding: 0px 5px 10px 10px;
 }
 
 .navbar {
@@ -44,12 +46,12 @@
     flex-grow: 1;
     justify-content: flex-end;
 
-    .btn-mode {
-      width: fit-content;
-      background-color: var(--nav);
-      color: var(--text-color);
-      font-size: 20px;
-    }
+    // .btn-mode {
+    //   width: fit-content;
+    //   background-color: var(--nav);
+    //   color: var(--text-color);
+    //   font-size: 20px;
+    // }
 
     ul {
       display: flex;
@@ -123,64 +125,76 @@
     .container-navbar {
       .logo-container {
         margin: 0;
-
+        
         .logo {
           font-size: 25px;
         }
       }
-
+      
       .mobile-menu {
-        display: var(--display);
+        display: block;
+        position: fixed;
+        top: 18px;
+        right: 13px;
+        z-index: var(--z-index);
+        opacity: var(--opacity);
+        // transition: transform 0.3s;    //I suck at css animations
+        
+        // &:active {
+        //   transform: scaleY(0);
+        // }
       }
-
+      
       nav {
-        display: var(--display);
-
         .mobile-menu-exit {
-          display: var(--display);
+          display: block;
           position: fixed;
           top: 18px;
-          right: 17px;
-          z-index: 999;
+          right: 13px;
+          z-index: var(--z-index);
+          opacity: var(--opacity);
+          // transition: transform 0.3s;
+          // transform-origin: 50% 50%;
+          
+          // &:active {
+          //   transform: rotate(-370deg);
+          // }
         }
-
+        
         .primary-nav {
           display: flex;
           flex-direction: column;
           place-content: center;
           position: fixed;
           background-color: var(--nav);
-          width: 75%;
+          width: 75vw;
           height: 100vh;
-          top: 0;
-          left: 25vw;
+          top: 57.777px;
+          left: var(--left);
           font-size: 20px;
-
+          overflow: hidden;
+          opacity: 0.98;
+          
           transition: left 0.3s;
-
+          
           .resume-list {
             padding-left: 0;
           }
-
+          
           li {
             width: fit-content;
             margin: 20px 0 20px 0;
-            // padding: 10px;
-            // place-content: center;
+            position: relative;
+            bottom: 58px;
 
             .moon {
               bottom: 40px;
               right: 0px;
-              // margin-left: 25px;
             }
 
-            // .sun {
-            //   margin-left: 25px;
-            // }
-
-            a {
-              &:active {
-                color: var(--primary-color);
+              a {
+                &:active {
+                  color: var(--primary-color);
               }
             }
           }
