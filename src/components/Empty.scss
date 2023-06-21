@@ -1,11 +1,26 @@
 .container-empty {
     box-sizing: border-box;
     color: var(--text-color);
-    display: block;
-    padding-top: 100px;
+    // padding-top: 100px;
     // left: 0px;
     // right: 0px;
+
+    z-index: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    display: block;
+    font-size: 14px;
+    height: 730px;
+    left: 0px;
+    right: 0px;
+    line-height: 20px;
+    padding-bottom: 67px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 269.797px;
+    // position: absolute;
     text-align: center;
+    font-size: 1.6em;    
 }
 
 .empty {

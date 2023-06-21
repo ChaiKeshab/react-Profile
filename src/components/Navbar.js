@@ -6,6 +6,7 @@ import menu from '../Images/menu.svg';
 import exit from '../Images/exit.svg';
 import moon from '../Images/moon.svg';
 import sun from '../Images/sun.svg';
+import resume from './Resume.pdf'
 // impt
 
 // rfc (react-function-component)
@@ -18,7 +19,7 @@ export default function Navbar(props) {
     if (theme === 'darkMode') {
       setTheme('lightMode')
       setMode(false)
-      
+
     }
     if (theme === 'lightMode') {
       setTheme('darkMode')
@@ -56,9 +57,9 @@ export default function Navbar(props) {
 
           <ul className='primary-nav'>
             {/* <li><Link className='home' to="/">Home</Link></li> */}
-            <li><Link to="/About">About</Link></li>
-            <li><Link to="/Projects">Projects</Link></li>
-            <li><Link to="/Blog">Resume</Link></li>
+            <li><Link to="/About" onClick={toggleHambar} className={`${hamBar ? 'hide' : 'show'}`}>About</Link></li>
+            <li><Link to="/Projects" onClick={toggleHambar} className={`${hamBar ? 'hide' : 'show'}`}>Projects</Link></li>
+            <li className='resume-list'><a className='resume' href={resume} target='_blank' rel='noreferrer'>Resume</a></li>
             {/* <li><button className='btn-mode' onClick={toggleMode}>{mode}</button></li> */}
             <li><img className={`sun ${mode ? 'show' : 'hide'}`} onClick={toggleMode} src={sun} alt="Dark Mode" /></li>
             <li><img className={`moon ${mode ? 'hide' : 'show'}`} onClick={toggleMode} src={moon} alt="Light Mode" /></li>

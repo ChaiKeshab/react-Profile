@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0f5486;
+    --primary-color: #0f598f;
     --select-color: #1f9df7;
 
     --display-show: block;
@@ -24,7 +24,7 @@
     --text-color: var(--text-color-light);
     --select-text-color: var(--select-text-color-light);
     // background: radial-gradient(#f2f2f2, #766094);
-    --background-image: var(--background-image-light)
+    --background-image: var(--background-image-light);
 }
 
 .darkMode {
@@ -33,13 +33,15 @@
     --text-color: var(--text-color-dark);
     --select-text-color: var(--select-text-color-dark);
     // background: radial-gradient(#818181, black);
-    --background-image: var(--background-image-dark)
+    --background-image: var(--background-image-dark);
 }
 
 .show {
-    --display: var(--display-show)
+    --display: var(--display-show);
+    // left: 25vw;
 }
 
 .hide {
-    --display: var(--display-hide)
+    // left: 100vw;
+    --display: var(--display-hide);
 }

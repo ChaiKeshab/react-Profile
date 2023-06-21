@@ -5,7 +5,8 @@ import './Empty.scss'
 export default function Projects() {
     return (
         <div className='container-empty'>
-            <h2>Projects...</h2>
+            <h1>404</h1>
+            <p>Page Not Found</p>
             <img className='empty' src={catBored} alt="Empty..." />
         </div>
     )
