@@ -67,7 +67,7 @@
       user-select: none;
 
       a.resume {
-        border: 3px solid;
+        border: 2px solid;
         padding: 10px;
         border-color: var(--primary-color);
         border-radius: 7px;
@@ -179,6 +179,11 @@
           
           .resume-list {
             padding-left: 0;
+
+            a{
+              padding-left: 30px;
+              padding-right: 30px;
+            }
           }
           
           li {

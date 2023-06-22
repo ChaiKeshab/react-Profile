@@ -7,20 +7,26 @@
 
     z-index: 0;
     box-sizing: border-box;
-    color: var(--text-color);
     display: block;
-    font-size: 14px;
     height: 730px;
     left: 0px;
     right: 0px;
     line-height: 20px;
-    padding-bottom: 67px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 269.797px;
+    padding: 269px 0 80px 0;
+
     // position: absolute;
     text-align: center;
     font-size: 1.6em;    
+
+    h1 {
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 5px;
+    }
+
+    p {
+        font-size: 15px;
+    }
 }
 
 .empty {

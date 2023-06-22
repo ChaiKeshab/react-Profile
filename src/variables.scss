@@ -1,6 +1,9 @@
 :root {
-    --primary-color: #0f598f;
-    --select-color: #1f9df7;
+    --primary-color-light: #0018F1;
+    --select-color-light: #0016d8;
+
+    --primary-color-dark: #05C4D6;
+    --select-color-dark: #00FFFF;
 
     --display-show: block;
     --display-hide: none;
@@ -15,14 +18,16 @@
     --opacity-hide: 0;
 
     --background-color-light: white;
-    --nav-light: #DED8E5;
+    --nav-light: #D3EEFF;
+    // --nav-light: #DED8E5;
     --text-color-light: black;
     --select-text-color-light: white;
     --background-image-light: url(./Images/snow.jpg);
     --background-image-light-mobile: url(./Images/snow-mobile.jpg);
 
     --background-color-dark: #0E0E0E;
-    --nav-dark: #090B17;
+    --nav-dark: #041F3C;
+    // --nav-dark: #090B17;
     --text-color-dark: #D1D5DB;
     --select-text-color-dark: #F8F8F8;
     --background-image-dark: url(./Images/Kiln.jpg);
@@ -30,6 +35,8 @@
 }
 
 .lightMode {
+    --primary-color: var(--primary-color-light);
+    --select-color: var(--select-color-light);
     --background-color: var(--background-color-light);
     --nav: var(--nav-light);
     --text-color: var(--text-color-light);
@@ -40,6 +47,8 @@
 }
 
 .darkMode {
+    --primary-color: var(--primary-color-dark);
+    --select-color: var(--select-color-dark);
     --background-color: var(--background-color-dark);
     --nav: var(--nav-dark);
     --text-color: var(--text-color-dark);
