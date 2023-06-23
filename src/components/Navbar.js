@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
-import './Navbar.scss'
+import './Navbar.css'
 import menu from '../Images/menu.svg';
 import exit from '../Images/exit.svg';
 import moon from '../Images/moon.svg';

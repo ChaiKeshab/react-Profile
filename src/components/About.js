@@ -1,6 +1,6 @@
 import React from 'react'
 import profile from '../Images/cryCat-profile.webp'
-import './About.scss'
+import './About.css'
 
 export default function About() {
     return (

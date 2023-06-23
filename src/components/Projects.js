@@ -1,6 +1,6 @@
 import React from 'react'
 import catBored from '../Images/catBored.png'
-import './Empty.scss'
+import './Empty.css'
 
 export default function Projects() {
     return (

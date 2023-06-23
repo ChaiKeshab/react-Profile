@@ -1,0 +1,26 @@
+.container-empty {
+  box-sizing: border-box;
+  color: var(--text-color);
+  z-index: 0;
+  box-sizing: border-box;
+  display: block;
+  height: 730px;
+  left: 0px;
+  right: 0px;
+  line-height: 20px;
+  padding: 269px 0 80px 0;
+  text-align: center;
+  font-size: 1.6em;
+}
+.container-empty h1 {
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+.container-empty p {
+  font-size: 15px;
+}
+
+.empty {
+  width: 30vmin;
+}
