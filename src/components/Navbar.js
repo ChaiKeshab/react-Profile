@@ -12,7 +12,7 @@ import resume from './Resume.pdf'
 // rfc (react-function-component)
 export default function Navbar(props) {
   //------------------------------------darkMode------------------------------------
-  const [mode, setMode] = useState('false')
+  const [mode, setMode] = useState(true)
   const [theme, setTheme] = useState('darkMode')
   const [blur, setBlur] = useState('')
 
