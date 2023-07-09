@@ -1,7 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+#
 src/components/*.css
 src/components/*.map
+src/*.css
+src/*.map
 
 # dependencies
 /node_modules

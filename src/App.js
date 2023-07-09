@@ -12,13 +12,12 @@ function App() {
   return (
     <BrowserRouter>
       <>
-        <Navbar title='CHAI ' spanTitle='KESHAB' />
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/Inputs' element={<Inputs Username="Your mama's name" />} />
           <Route path='/About' element={<About />} />
           <Route path='/Projects' element={<Projects />} />
-          {/* <Route path='/Footer' element={<Footer />} /> */}
         </Routes>
         <Footer />
       </>

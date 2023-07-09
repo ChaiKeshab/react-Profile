@@ -4,7 +4,7 @@
     background-image: var(--background-image);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100vw;
+    background-size: cover;
     background-attachment: fixed;
 
     z-index: 0;
@@ -46,7 +46,7 @@
     padding: 150px 0 150px 0;
     margin: auto;
     width: 60vw;
-    height: 720px;
+    height: 100vh;
 
     p,
     cite {
@@ -66,11 +66,6 @@
 
 @media (max-width: 768px) {
     .container-home {
-        background-image: var(--background-image-mobile);
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: 100vw;
-        background-attachment: fixed;
 
         h1 {
             font-size: 40px;

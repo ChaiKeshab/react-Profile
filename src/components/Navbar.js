@@ -16,13 +16,12 @@ export default function Navbar(props) {
   const [theme, setTheme] = useState('darkMode')
   const [blur, setBlur] = useState('')
 
-  function toggleMode() {
+  const toggleMode = () => {
     if (theme === 'darkMode') {
       setTheme('lightMode')
       setMode(false)
-
     }
-    if (theme === 'lightMode') {
+    else if (theme === 'lightMode') {
       setTheme('darkMode')
       setMode(true)
     }
@@ -36,51 +35,51 @@ export default function Navbar(props) {
 
   //------------------------------------menuToggle------------------------------------
   const [hamBar, setHamBar] = useState(false)
-  function toggleHambar() {
 
+  const toggleHambar = () => {
     if (window.matchMedia('(max-width: 767px)').matches) {
       if (blur === '') {
         setHamBar(true)
         setBlur('blur')
       }
-
-      if (blur === 'blur') {
+      else if (blur === 'blur') {
         setHamBar(false)
         setBlur('')
       }
     }
+  }
+  
+  const closeMenu = () => {
+    setHamBar(false);
+    setBlur('')
   }
 
   return (
     <div className="navbar">
       <div className="container-navbar">
         <div className="logo-container">
-
-          <Link to="/" className="logo">
-            {props.title}<span>{props.spanTitle}</span>
-          </Link>
+          <Link to="/" className="logo"> CHAI <span>KESHAB</span></Link>
         </div>
-        <img id="mobile-cta" className={`mobile-menu ${hamBar ? 'hide' : 'show'}`} src={menu} alt="Open Navigation" onClick={toggleHambar} />
+
+        <img className={`mobile-menu ${hamBar ? 'hide' : 'show'}`} src={menu} alt="Open Navigation" onClick={() => toggleHambar()} />
 
         <nav>
-          <img id="mobile-exit" className={`mobile-menu-exit ${hamBar ? 'show' : 'hide'}`} src={exit} alt="Close Navigation" onClick={toggleHambar} />
+          <img className={`mobile-menu-exit ${hamBar ? 'show' : 'hide'}`} src={exit} alt="Close Navigation" onClick={() => toggleHambar()} />
 
-          <ul className={`primary-nav ${hamBar ? 'show' : 'hide'}`}>
+          <div className={`nav-div ${hamBar ? 'show' : 'hide'}`}>
 
-            {/* <li><Link className='home' to="/">Home</Link></li> */}
-            <li><Link to="/About" onClick={toggleHambar} className={`${hamBar ? 'hide' : 'show'}`}>About</Link></li>
-            <li><Link to="/Projects" onClick={toggleHambar} className={`${hamBar ? 'hide' : 'show'}`}>Projects</Link></li>
-            <li className='resume-list'><a className='resume' href={resume} target='_blank' rel='noreferrer'>Resume</a></li>
-            {/* <li><button className='btn-mode' onClick={toggleMode}>{mode}</button></li> */}
+            <ul className={`nav-one`}>
+              <li><Link to="/About" onClick={() => closeMenu()} className={`${hamBar ? 'hide' : 'show'}`}>About</Link></li>
+              <li><Link to="/Projects" onClick={() => closeMenu()} className={`${hamBar ? 'hide' : 'show'}`}>Projects</Link></li>
 
-            <li><img className={`sun ${mode ? 'show' : 'hide'}`} onClick={toggleMode} src={sun} alt="Dark Mode" /></li>
-            <li><img className={`moon ${mode ? 'hide' : 'show'}`} onClick={toggleMode} src={moon} alt="Light Mode" /></li>
-          </ul>
+              <li><a className='resume' href={resume} target='_blank' rel='noreferrer'>Resume</a></li>
+            </ul>
+          </div >
 
-
-          {/* <ul className='secondary-nav'>
-            <li><Link to="/Inputs">Sign Up</Link></li>
-          </ul> */}
+          <div className='sun-moon'>
+            <img className={`sun ${mode ? 'show' : 'hide'}`} onClick={() => toggleMode()} src={sun} alt="Dark Mode" />
+            <img className={`moon ${mode ? 'hide' : 'show'}`} onClick={() => toggleMode()} src={moon} alt="Light Mode" />
+          </div>
         </nav>
       </div>
     </div>
