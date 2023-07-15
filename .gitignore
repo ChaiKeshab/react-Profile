@@ -15,7 +15,6 @@ dist-ssr
 #self
 src/components/*.css
 src/components/*.map
-src/App.css
 src/*.map
 
 # Editor directories and files
