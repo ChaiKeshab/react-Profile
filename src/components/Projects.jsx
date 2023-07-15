@@ -1,4 +1,3 @@
-import React from 'react'
 import catBored from '../Images/catBored.png'
 import './Empty.css'
 

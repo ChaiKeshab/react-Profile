@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import heart from '../Images/heart.svg'
 import reload from '../Images/reload.svg'
 import score1 from '../Images/score1.png'
@@ -73,7 +73,7 @@ export default function Home() {
   return (
     <>
       <div className='container-home'>
-        <h1>HI, I'M CHAI</h1>
+        <h1>HI, I&apos;M CHAI</h1>
         <p>Welcome to my web space!</p>
       </div>
 

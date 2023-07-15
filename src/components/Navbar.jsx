@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import './Navbar.css'
@@ -10,7 +10,7 @@ import resume from './Resume.pdf'
 // impt
 
 // rfc (react-function-component)
-export default function Navbar(props) {
+export default function Navbar() {
   //------------------------------------darkMode------------------------------------
   const [mode, setMode] = useState(true)
   const [theme, setTheme] = useState('darkMode')
@@ -48,7 +48,7 @@ export default function Navbar(props) {
       }
     }
   }
-  
+
   const closeMenu = () => {
     setHamBar(false);
     setBlur('')
